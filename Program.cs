@@ -1,4 +1,6 @@
 using System;
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.Win32;
 
 namespace HwidSpoofer
@@ -8,7 +10,8 @@ namespace HwidSpoofer
         static void Main(string[] args)
         {
             Console.WriteLine("Original HWID: " + GetHWID());
-            SpoofHWID("1234-5678"); // Example new serial number
+            string randomHWID = GenerateRandomHWID();
+            SpoofHWID(randomHWID);
             Console.WriteLine("Spoofed HWID: " + GetHWID());
         }
 
@@ -44,6 +47,17 @@ namespace HwidSpoofer
             catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        static string GenerateRandomHWID()
+        {
+            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            {
+                byte[] randomBytes = new byte[4];
+                rng.GetBytes(randomBytes);
+                uint randomUint = BitConverter.ToUInt32(randomBytes, 0);
+                return randomUint.ToString("X8");
             }
         }
     }
