@@ -20,7 +20,7 @@ namespace HwidSpoofer
             string hwid = "Unknown";
             try
             {
-                RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\disk\Enum");
+                RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SYSTEM\\CurrentControlSet\\Services\\disk\\Enum");
                 if (key != null)
                 {
                     hwid = key.GetValue("0").ToString();
@@ -37,7 +37,7 @@ namespace HwidSpoofer
         {
             try
             {
-                RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\disk\Enum", true);
+                RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SYSTEM\\CurrentControlSet\\Services\\disk\\Enum", true);
                 if (key != null)
                 {
                     key.SetValue("0", newSerial);
