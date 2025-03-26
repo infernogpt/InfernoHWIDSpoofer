@@ -19,7 +19,7 @@ This is a simple HWID (Hardware ID) spoofer application. The application spoofs 
 
 ## Requirements
 
-- .NET 6.0 SDK or later
+- .NET 8.0 SDK or later
 - Visual Studio 2022 or later
 
 ## How to Use
