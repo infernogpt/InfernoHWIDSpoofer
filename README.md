@@ -5,7 +5,7 @@
 ![Issues](https://img.shields.io/github/issues/infernogpt/HwidSpoofer?style=for-the-badge&label=Issues)
 ![License](https://img.shields.io/github/license/infernogpt/HwidSpoofer?style=for-the-badge&label=License)
 
-![HWID Spoofer Screenshot](images/hwid-spoofer-screenshot.png)
+![HWID Spoofer Screenshot](file:///C:/Users/Kingd/OneDrive/Pictures/Screenshots%201/Screenshot%202025-04-04%20152423.png)
 
 ## Introduction
 
