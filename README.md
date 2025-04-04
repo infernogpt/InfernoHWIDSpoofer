@@ -9,8 +9,7 @@
 
 ## Introduction
 
-HWID Spoofer by Inferno is a tool designed to spoof the HWID of your machine. It allows you to spoof, revert, back up, and restore your HWID with ease. This tool is perfect for testing and development purposes.
-
+HWID Spoofer by Inferno is a tool designed to spoof the HWID of your machine. It allows you to spoof, revert, back up, and restore your HWID with ease. This tool is perfect to destroy gorilla tag
 ## Features
 
 - **Spoof HWID**: Generate a random HWID to spoof your current one.
