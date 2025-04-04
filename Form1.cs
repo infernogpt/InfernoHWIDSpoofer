@@ -103,6 +103,11 @@ namespace HwidSpoofer
             Process.Start(new ProcessStartInfo("https://github.com/infernogpt/ShitHWIDSpoofer") { UseShellExecute = true });
         }
 
+        private void LinkAzureMenu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://dsc.gg/azuremodding") { UseShellExecute = true });
+        }
+
         private void InitializeNotifyIcon()
         {
             notifyIcon = new NotifyIcon
