@@ -21,6 +21,7 @@ namespace HwidSpoofer
             this.btnBackup = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.linkLabel = new System.Windows.Forms.LinkLabel();
+            this.linkAzureMenu = new System.Windows.Forms.LinkLabel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -85,6 +86,18 @@ namespace HwidSpoofer
             this.linkLabel.Text = "GitHub Repo";
             this.linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
+            // linkAzureMenu
+            // 
+            this.linkAzureMenu.AutoSize = true;
+            this.linkAzureMenu.LinkColor = System.Drawing.Color.Blue;
+            this.linkAzureMenu.Location = new System.Drawing.Point(140, 250);
+            this.linkAzureMenu.Name = "linkAzureMenu";
+            this.linkAzureMenu.Size = new System.Drawing.Size(120, 20);
+            this.linkAzureMenu.TabIndex = 5;
+            this.linkAzureMenu.TabStop = true;
+            this.linkAzureMenu.Text = "Get Azure Menu";
+            this.linkAzureMenu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkAzureMenu_LinkClicked);
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -93,7 +106,7 @@ namespace HwidSpoofer
             this.lblTitle.Location = new System.Drawing.Point(85, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(230, 25);
-            this.lblTitle.TabIndex = 5;
+            this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "HWID Spoofer by Inferno";
             // 
             // lblStatus
@@ -101,10 +114,10 @@ namespace HwidSpoofer
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.Red;
-            this.lblStatus.Location = new System.Drawing.Point(150, 250);
+            this.lblStatus.Location = new System.Drawing.Point(150, 280);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(160, 20);
-            this.lblStatus.TabIndex = 6;
+            this.lblStatus.TabIndex = 7;
             this.lblStatus.Text = "HWID NOT SPOOFED";
             // 
             // MainForm
@@ -112,9 +125,10 @@ namespace HwidSpoofer
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(500, 300);
+            this.ClientSize = new System.Drawing.Size(500, 320);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.linkAzureMenu);
             this.Controls.Add(this.linkLabel);
             this.Controls.Add(this.btnSpoof);
             this.Controls.Add(this.btnRevert);
@@ -124,7 +138,6 @@ namespace HwidSpoofer
             this.Text = "HWID Spoofer by Inferno";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         private System.Windows.Forms.Button btnSpoof;
@@ -132,6 +145,7 @@ namespace HwidSpoofer
         private System.Windows.Forms.Button btnBackup;
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.LinkLabel linkLabel;
+        private System.Windows.Forms.LinkLabel linkAzureMenu;
         private System.Windows.Forms.Label lblTitle;
     }
 }
