@@ -5,7 +5,7 @@
 ![Issues](https://img.shields.io/github/issues/infernogpt/HwidSpoofer?style=for-the-badge&label=Issues)
 ![License](https://img.shields.io/github/license/infernogpt/HwidSpoofer?style=for-the-badge&label=License)
 
-![HWID Spoofer Screenshot](WORKING ON IT)
+![HWID Spoofer Screenshot](Screenshot 2025-04-04 152423.png)
 
 ## Introduction
 
