@@ -30,11 +30,25 @@ HWID Spoofer by Inferno is a tool designed to spoof the HWID of your machine. It
 
 ### Installation
 
-Download from the releases tabs of this repo
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/infernogpt/HwidSpoofer.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd HwidSpoofer
+   ```
+3. Build the project:
+   ```sh
+   dotnet build
+   ```
 
 ### Running the Application
 
-1. Run the application
+1. Run the application:
+   ```sh
+   dotnet run --project HwidSpoofer
+   ```
 
 ### Publishing the Application
 
