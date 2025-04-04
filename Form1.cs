@@ -12,7 +12,6 @@ namespace HwidSpoofer
         private readonly ILogger<MainForm> logger;
         private string originalHWID;
         private string backupHWID;
-        private NotifyIcon notifyIcon;
 
         public MainForm(ILogger<MainForm> logger)
         {
@@ -20,7 +19,6 @@ namespace HwidSpoofer
             this.logger = logger;
 
             originalHWID = RetrieveHWID();
-            InitializeNotifyIcon();
 
             lblStatus.Text = "HWID NOT SPOOFED";
             lblStatus.ForeColor = System.Drawing.Color.Red;
@@ -35,7 +33,6 @@ namespace HwidSpoofer
                 string randomHWID = GenerateRandomHWID();
                 UpdateHWID(randomHWID);
                 ShowMessage($"Original HWID: {originalHWID}\nSpoofed HWID: {randomHWID}", "HWID Spoofed", MessageBoxIcon.Information);
-                ShowNotification("HWID Spoofed", $"Original HWID: {originalHWID}\nSpoofed HWID: {randomHWID}");
                 UpdateStatus("HWID SPOOFED", System.Drawing.Color.Green);
                 logger.LogInformation("HWID spoofed from {OriginalHWID} to {RandomHWID}", originalHWID, randomHWID);
             }
@@ -51,7 +48,6 @@ namespace HwidSpoofer
             {
                 UpdateHWID(originalHWID);
                 ShowMessage($"HWID reverted to original value: {originalHWID}", "HWID Reverted", MessageBoxIcon.Information);
-                ShowNotification("HWID Reverted", $"HWID reverted to original value: {originalHWID}");
                 UpdateStatus("HWID NOT SPOOFED", System.Drawing.Color.Red);
                 logger.LogInformation("HWID reverted to original value: {OriginalHWID}", originalHWID);
             }
@@ -67,7 +63,6 @@ namespace HwidSpoofer
             {
                 backupHWID = RetrieveHWID();
                 ShowMessage($"HWID backed up: {backupHWID}", "HWID Backup", MessageBoxIcon.Information);
-                ShowNotification("HWID Backup", $"HWID backed up: {backupHWID}");
                 logger.LogInformation("HWID backed up: {BackupHWID}", backupHWID);
             }
             catch (Exception ex)
@@ -88,7 +83,6 @@ namespace HwidSpoofer
 
                 UpdateHWID(backupHWID);
                 ShowMessage($"HWID restored to backup value: {backupHWID}", "HWID Restored", MessageBoxIcon.Information);
-                ShowNotification("HWID Restored", $"HWID restored to backup value: {backupHWID}");
                 UpdateStatus("HWID NOT SPOOFED", System.Drawing.Color.Red);
                 logger.LogInformation("HWID restored to backup value: {BackupHWID}", backupHWID);
             }
@@ -108,22 +102,6 @@ namespace HwidSpoofer
             Process.Start(new ProcessStartInfo("https://dsc.gg/azuremodding") { UseShellExecute = true });
         }
 
-        private void InitializeNotifyIcon()
-        {
-            notifyIcon = new NotifyIcon
-            {
-                Icon = SystemIcons.Information,
-                Visible = true
-            };
-        }
-
-        private void ShowNotification(string title, string text)
-        {
-            notifyIcon.BalloonTipTitle = title;
-            notifyIcon.BalloonTipText = text;
-            notifyIcon.ShowBalloonTip(3000);
-        }
-
         private void ShowMessage(string message, string caption, MessageBoxIcon icon)
         {
             MessageBox.Show(message, caption, MessageBoxButtons.OK, icon);
@@ -139,7 +117,6 @@ namespace HwidSpoofer
         {
             logger.LogError(ex, $"An error occurred while {action}.");
             ShowMessage($"An error occurred while {action}: {ex.Message}", "Error", MessageBoxIcon.Error);
-            ShowNotification("Error", $"An error occurred while {action}: {ex.Message}");
         }
 
         private static string RetrieveHWID()
