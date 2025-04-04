@@ -5,6 +5,7 @@ This is a simple HWID (Hardware ID) spoofer application. The application spoofs 
 ## With the latest Gorilla Tag Update, You Need Spoofers To Ban Evade.
 
 - Follow The Instructions To Use My HWID Spoofer
+- Gorilla Tag can go fuck themselves. This is completely updates, run as admin use a vpn or a Hotspot (Iphone Or Android) and fuck the games. 
 
 
 ![image](https://github.com/user-attachments/assets/839340a4-0a15-442d-b8bd-1df28fb7a459)
