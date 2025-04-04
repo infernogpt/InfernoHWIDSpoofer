@@ -1,56 +1,99 @@
-# HWID Spoofer
+# HWID Spoofer by Inferno
 
-This is a simple HWID (Hardware ID) spoofer application. The application spoofs the HWID to a random value each time the "Spoof HWID" button is clicked. The application has a simple and clean blue and black themed user interface with a button to spoof the HWID and a link to the GitHub repository.
+![Downloads](https://img.shields.io/github/downloads/infernogpt/HwidSpoofer/total?style=for-the-badge&label=Downloads)
+![Stars](https://img.shields.io/github/stars/infernogpt/HwidSpoofer?style=for-the-badge&label=Stars)
+![Issues](https://img.shields.io/github/issues/infernogpt/HwidSpoofer?style=for-the-badge&label=Issues)
+![License](https://img.shields.io/github/license/infernogpt/HwidSpoofer?style=for-the-badge&label=License)
 
-## With the latest Gorilla Tag Update, You Need Spoofers To Ban Evade.
+![HWID Spoofer Screenshot](images/hwid-spoofer-screenshot.png)
 
-- Follow The Instructions To Use My HWID Spoofer
-- Gorilla Tag can go fuck themselves. This is completely updates, run as admin use a vpn or a Hotspot (Iphone Or Android) and fuck the games. 
+## Introduction
 
-
-![image](https://github.com/user-attachments/assets/839340a4-0a15-442d-b8bd-1df28fb7a459)
-
-
+HWID Spoofer by Inferno is a tool designed to spoof the HWID of your machine. It allows you to spoof, revert, back up, and restore your HWID with ease. This tool is perfect for testing and development purposes.
 
 ## Features
 
-- Spoofs HWID to a random value
-- Simple and clean blue and black themed UI
-- Link to GitHub repository
+- **Spoof HWID**: Generate a random HWID to spoof your current one.
+- **Revert HWID**: Revert to the original HWID.
+- **Backup HWID**: Backup the current HWID for future restoration.
+- **Restore HWID**: Restore the HWID from a backup.
+- **Notifications**: Receive notifications for actions performed.
+- **Status Indicator**: Visual indication of whether the HWID is spoofed or not.
+- **Links**: Quick access to the GitHub repository and Azure Menu.
 
-## Requirements
+## Getting Started
+
+### Prerequisites
 
 - .NET 8.0 SDK or later
-- Visual Studio 2022 or later
+- Windows operating system
 
-## How to Use
+### Installation
 
-1. **Clone the Repository**:
-   ```sh
-   git clone https://github.com/infernogpt/ShitHWIDSpoofer.git
-   cd ShitHWIDSpoofer
-   ```
+Download from the releases tabs of this repo
 
-2. **Open the Project in Visual Studio**:
-   - Open `HWID_Spoofer.sln` in Visual Studio.
+### Running the Application
 
-3. **Build the Project**:
-   - Press `Ctrl+Shift+B` to build the solution.
+1. Run the application
 
-4. **Run the Application**:
-   - Press `F5` to run the application.
+### Publishing the Application
 
-5. **Spoof HWID**:
-   - Click the "Spoof HWID" button to spoof the HWID to a random value.
-   - The original and spoofed HWID will be displayed in a message box.
+To publish the project as a single executable, use the following command:
+```sh
+dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true
+```
+This will create a single executable file located in the `bin\Release\net8.0\win-x64\publish` directory.
 
-6. **Visit GitHub Repository**:
-   - Click the "GitHub Repo" link to visit the GitHub repository.
+## Usage
 
-## Disclaimer
+### Spoofing HWID
 
-This application is for educational purposes only. Use it at your own risk.
+1. Click the **Spoof HWID** button to generate and apply a random HWID.
+
+### Reverting HWID
+
+1. Click the **Revert to Original** button to revert to the original HWID.
+
+### Backing Up HWID
+
+1. Click the **Backup HWID** button to back up the current HWID.
+
+### Restoring HWID
+
+1. Click the **Restore HWID** button to restore the HWID from the backup.
+
+### Accessing Links
+
+1. Click the **GitHub Repo** link to visit the GitHub repository.
+2. Click the **Get Azure Menu** link to visit the Azure Menu page.
+
+## Screenshots
+
+### Main Interface
+![Main Interface](images/main-interface.png)
+
+### Spoofed HWID
+![Spoofed HWID](images/spoofed-hwid.png)
+
+## Contributing
+
+Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Special thanks to all contributors and supporters.
+- Inspired by various open-source projects.
+
+## Contact
+
+- **Author**: Inferno
+- **GitHub**: [infernogpt](https://github.com/infernogpt)
+- **Website**: [Azure Modding](https://dsc.gg/azuremodding)
+
+---
+
+![Footer Image](images/footer.png)
